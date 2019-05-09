@@ -6,13 +6,17 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import HelloWorld from './components/HelloWorld.vue';
+import FormDataRequest from '@salzoff/hwsclient/src/classes/request/FormDataRequest';
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: {
+        HelloWorld
+    },
+    mounted() {
+      const request = new FormDataRequest();
+      console.log(request.getOwnProperties());
+    }
 };
 </script>
 
